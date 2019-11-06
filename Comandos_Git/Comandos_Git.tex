@@ -149,13 +149,48 @@ Sino, si trabajan en linux y instalaron git con el comando \textit{\color{Green}
 
 Vamos a ver que nos clona la carpeta en el escritorio con el nombre del repo. Abrimos la carpeta y vemos que el contenido es el mismo mas la carpeta oculta \textit{.git} de la que hablamos antes.
 
+\begin{figure}[H]
+  \begin{center}
+	 \includegraphics{figuras/carpeta.png}
+	 \centering
+	 \renewcommand{\arraystretch}{1.3}
+	 \caption{Clonando el repositorio en el escritorio}
+  \end{center}
+\end{figure}
 
 Ahora, lo que voy a hacer es poner la carpeta donde esta este pdf en el repositorio y voy a seguir los pasos de arriba:
+\begin{figure}[H]
+  \begin{center}
+	 \includegraphics{figuras/Copio.png}
+	 \centering
+	 \renewcommand{\arraystretch}{1.3}
+	 \caption{Pongo mi proyecto en el repo}
+  \end{center}
+\end{figure}
+Ahora, abro una terminal sobre el repositorio o me corro adentre del repositorio, pero asegurense de estar dentro de la carpeta del repositorio y corro \textit{git status}.
+\begin{figure}[H]
+  \begin{center}
+	 \includegraphics{figuras/StatusUno.png}
+	 \centering
+	 \renewcommand{\arraystretch}{1.3}
+	 \caption{Realizo un status}
+  \end{center}
+\end{figure}
+Como vemos, esta en rojo y nos dice $"$a estas cosas les podes hacer el add . $"$. Hacemos el \textit{add .} y corremos git status denuevo.
+\begin{figure}[H]
+  \begin{center}
+	 \includegraphics{figuras/add.png}
+	 \centering
+	 \renewcommand{\arraystretch}{1.3}
+	 \caption{Realizo el add .}
+  \end{center}
+\end{figure}
+
+Ahora, hacemos el \textit{commit}:
 
 
- 
- 
- lo cual se hace con el comando \textit{\color{Blue}{git push origin master}}. Este comando lo voy a explicar mejor un poco mas adelante. Lo que es necesario entender hasta aca es que este comando lo sube a tu nube. Al ir a tu pagina en github, vas a ver que se renovo el repositorio de tu cuenta.
+
+ el comando \textit{\color{Blue}{git push origin master}}. Este comando lo voy a explicar mejor un poco mas adelante. Lo que es necesario entender hasta aca es que este comando lo sube a tu nube. Al ir a tu pagina en github, vas a ver que se renovo el repositorio de tu cuenta.
 \\
 \\
 \\

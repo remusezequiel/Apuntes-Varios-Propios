@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  6 NOV 2019 09:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  6 NOV 2019 09:47
 entering extended mode
 **./Comandos_Git.tex
 (Comandos_Git.tex
@@ -1408,142 +1408,205 @@ Overfull \hbox (11.73611pt too wide) in paragraph at lines 143--146
  [] 
  []
 
+<figuras/carpeta.png, id=56, 255.95625pt x 117.43875pt>
+File: figuras/carpeta.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--162
+<use figuras/carpeta.png>
+Package pdftex.def Info: figuras/carpeta.png used on input line 154.
+(pdftex.def)             Requested size: 255.95561pt x 117.43845pt.
+
+Overfull \hbox (11.73611pt too wide) in paragraph at lines 154--157
+ [] 
+ []
+
+<figuras/Copio.png, id=57, 170.13562pt x 108.405pt>
+File: figuras/Copio.png Graphic file (type png)
+ <use figuras/Copio.png>
+Package pdftex.def Info: figuras/Copio.png used on input line 164.
+(pdftex.def)             Requested size: 170.1352pt x 108.40472pt.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 169.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 169.
+
+[3 <./figuras/repoNuevo.png> <./figuras/consola.png> <./figuras/clone.png> <./f
+iguras/carpeta.png>] <figuras/StatusUno.png, id=70, 255.95625pt x 109.91063pt>
+File: figuras/StatusUno.png Graphic file (type png)
+
+<use figuras/StatusUno.png>
+Package pdftex.def Info: figuras/StatusUno.png used on input line 173.
+(pdftex.def)             Requested size: 255.95561pt x 109.91034pt.
+
+Overfull \hbox (11.73611pt too wide) in paragraph at lines 173--176
+ [] 
+ []
+
+<figuras/add.png, id=71, 255.95625pt x 155.83218pt>
+File: figuras/add.png Graphic file (type png)
+ <use figuras/add.png>
+Package pdftex.def Info: figuras/add.png used on input line 182.
+(pdftex.def)             Requested size: 255.95561pt x 155.8318pt.
+
+Overfull \hbox (11.73611pt too wide) in paragraph at lines 182--185
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--162
+Underfull \hbox (badness 10000) in paragraph at lines 193--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--162
+Underfull \hbox (badness 10000) in paragraph at lines 193--197
 
  []
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 165.
-[3 <./figuras/repoNuevo.png> <./figuras/consola.png> <./figuras/clone.png>]
+(babel)             in language  on input line 200.
+[4 <./figuras/Copio.png> <./figuras/StatusUno.png> <./figuras/add.png>]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 166.
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 170.
+(babel)             in language  on input line 201.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 205.
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--178
+Underfull \hbox (badness 10000) in paragraph at lines 210--213
 []\OT1/ppl/m/n/8.03 Link: [][]$https : / / www . youtube . com / watch ? v = m4
 wh8GhzcYg &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--190
+Underfull \hbox (badness 10000) in paragraph at lines 222--225
 []\OT1/ppl/m/n/8.03 Link: [][]$https : / / github . com / remusezequiel /
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 198.
-[4pdfTeX warning (ext4): destination with the same identifier (name{cite.IEEEho
+(babel)             in language  on input line 233.
+[5pdfTeX warning (ext4): destination with the same identifier (name{cite.IEEEho
 wto:kopka}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.198 \end{document}
+l.233 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.IEEEhowto:kopka}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.198 \end{document}
+l.233 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.IEEEhowto:kopka}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.198 \end{document}
+l.233 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.IEEEhowto:kopka}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.198 \end{document}
+l.233 \end{document}
                     
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
  (Comandos_Git.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 198.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
 Package rerunfilecheck Info: File `Comandos_Git.out' has not changed.
 (rerunfilecheck)             Checksum: 9A1A61DE3BDA929EA13D3EDCC48CFB61;141.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
  ) 
 Here is how much of TeX's memory you used:
- 18845 strings out of 493323
- 343864 string characters out of 3139065
+ 18870 strings out of 493323
+ 344307 string characters out of 3139065
  426620 words of memory out of 3000000
- 21987 multiletter control sequences out of 15000+200000
+ 22003 multiletter control sequences out of 15000+200000
  47233 words of font info for 121 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,54p,765b,399s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1556,9 +1619,9 @@ ic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb>
 iles/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/urw/palatino/uplri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/zapfding/uzdr.pfb>
-Output written on Comandos_Git.pdf (4 pages, 310780 bytes).
+Output written on Comandos_Git.pdf (5 pages, 396809 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 67 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 130 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 87 words of extra memory for PDF output out of 10000 (max. 10000000)
 
