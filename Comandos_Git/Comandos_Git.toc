@@ -1,4 +1,9 @@
 \select@language {spanish}
 \contentsline {section}{\numberline {1}Iniciales}{1}{section.1}
 \contentsline {section}{\numberline {2}Repositorios}{1}{section.2}
-\contentsline {section}{Referencias}{5}{section*.2}
+\contentsline {section}{\numberline {3}Git Colavorativo}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Introducci\IeC {\'o}n}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Pasos}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Comandos}{5}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Ahora a trabajar de verdad}{5}{subsection.3.4}
+\contentsline {section}{Referencias}{7}{section*.2}

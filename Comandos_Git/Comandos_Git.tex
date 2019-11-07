@@ -216,6 +216,88 @@ Y ahora es la hora de hacer el push lo cual se hace con el comando \textit{\colo
 \end{figure} 
 
 
+\section{Git Colavorativo}
+\subsection{Introducción}
+Supongamos que estás trabajando en un proyecto y queres agrgar una nueva funcionalidad. La forma correcta es creando un \textit{Branch} o  \textit{Rama} con el nombre de la nueva funcionalidad donde agregaremos nuestros cambios.
+
+Por defecto, cuando creamos un repositorio tiene una rama llamada \textit{master} (Como buena practica, nada debe desarrollarse en master, pero eso es otro tema). Para esto estan las ramas para experimentar y hacer cambios.
+
+Un Branch (Rama), es una copia del proyecto, bajo el control de versiones, de forma que los cambios realizados en esta rama no afecten al resto del proyecto y viceversa. En español esto dice que el \textit{Branching o Ramificación} es la manera de trabajar en diferentes versiones de un repositorio a la vez.
+
+Un \textit{Fork} es una copia exacta de un repositorio; creando uno nuevo en tu cuenta de Github con una url diferente que podemos utilizar como un repositorio git cualquiera. Tendremos dos repositorios independientes y cada uno evoluciona de forma autonoma.
+
+Un pull request es una petición que el propietario de un fork de un repositorio hace al propietario del repositorio original para que este último incorpore los commits que están en el fork.
+
+\subsection{Pasos} 
+ Los pasos a seguir para trabajar de forma colaborativa son:
+ 
+ \begin{enumerate}
+ \item Hacer \textit{fork} desde la interfaz de github del proyecto en el cual queremos colaborar.
+ \item Clonamos el repositorio al que le hicimos \textit{fork}.
+ \item Creamos una nueva rama para desarrollar nuestro aporte
+ \item Realizamos los commits para describir las modificaciones u aportes.
+ \item Se hace un push de las modificaciones en nuestra copia del repositorio
+ \item Se pide un pull request desde la interfaz de github
+ \end{enumerate}
+\subsection{Comandos}
+Vamos a tener que tener en claro que hace cada uno de estos comandos:
+\begin{itemize}
+
+\item \textit{\color{Blue}{git branch nombreDeLaRama}}: Crea la rama llamada nombreDeLaRama
+
+\item \textit{\color{Blue}{git branch}}: Enlista todas las ramas en el repositorio actual.
+
+\item \textit{\color{Blue}{git branch -d nombreDeLaRama}}: Elimina la rama especificada
+
+\item \textit{\color{Blue}{git checkout nombreDeLaRama}}: cambia a la rama especificada
+
+\item \textit{\color{Blue}{git remote -v}}
+
+\item \textit{\color{Blue}{git remote add nombreQueVaATenerElRemoto url}}
+
+\item \textit{\color{Blue}{git remote rename old new}}
+
+\item \textit{\color{Brown}{git log --online}}
+\end{itemize}
+
+\subsection{Ahora a trabajar de verdad} 
+Veamos como podemos aportar a un repositorio ya existente.
+
+Imaginense que en mi cuenta tengo un repositorio en el cual vamos a trabajar los tres. Como el repositorio original, es decir el que tiene la rama master, es mio ustedes tienen que hacer la copia de mi repositorio en el suyo, esto se hace mediante el \textit{fork}. Supongamos que el repositorio al que le tienen que hacer fork es el repositorio con url \url{https://github.com/remusezequiel/Haskell-Algebra1}, ustedes tienen que entrar al repo y darle al fork.
+\begin{figure}[H]
+  \begin{center}
+	 \includegraphics{figuras/fork.png}
+	 \centering
+	 \renewcommand{\arraystretch}{1.3}
+	 \caption{Boton del fork (disculpen la calidad horrenda de imagen)}
+  \end{center}
+\end{figure} 
+Al apretar ahi se genera en su cuenta una copia de mi repositorio (Si no me equivoco es una especie de puntero, pero desconosco como se enlaza a nivel programación). Ahora pueden trabajar con una copia de mi repositorio como si fuera de ustedes, y si lo modifican no van a modificar mi repositorio directamente. Para hacer que las modificaciones que hagan aparescan en mi repositorio basicamente yo tengo que aceptar sus cambios, porque el repo original es mio. Esto se hace para que justamente, si vos queres sacarle info a un desconosido porque te sirve o queres aprender de su codigo y modificarlo a tu gusto no modifiques directamente sus cosas, solo se puede modificar si el administrador te lo permite. El hace la copia del repo, pero no lo actualiza todo el tiempo a menos que vos lo actualizes cuando te convenga. 
+
+Ya podemos clonar nuestro repositorio fork de la misma forma que lo hicimos en la sección 2.
+
+Por defecto el al clonarlo el comando \textit{clone} crea por defecto el remoto \textit{origin} que apunta al fork que realizaste, es decir a tu repositorio. Fijense, corran el comando \textit{\color{Blue}{git remote -v}}, este les va a tirar algo parecido a esto:
+\begin{figure}[H]
+  \begin{center}
+	 \includegraphics{figuras/gitRemote.png}
+	 \centering
+	 \renewcommand{\arraystretch}{1.3}
+  \end{center}
+\end{figure} 
+Nos interesa mantener un enlace entre el repositorio original y con el fork, por lo tanto tenemos que renombrar el remoto que apunta al repositorio propio, para hacer esto tenemos que usar el comando \textit{\color{Blue}{git remote rename old new}}, donde \textit{old} representa el nombre actual del remoto (es decir origin) y \textit{new} es el nombre que queres ponerle vos al remoto, ejemplo: \textit{\color{Brown}{git remote rename origin papasConCheddar}}, en este caso cambiamos el nombre del remoto pasando de llamarse origin a papasConCheddar. Vean corran de nuevo el comando \textit{\color{Blue}{git remote -v}} y van a ver que en donde antes decia origin dice papasConCheddar.
+
+Una vez hecho este paso tenemos que configurar el repositorio original, es decir el del tipo que esta administrando, para esto vamos al repositorio original en github y copiamos la url que usamos para clonar los repositorios, la del boton verde que dice clone or download. Una vez copiada la url, volvemos a la terminal y corremos el comando \textit{\color{Blue}{git remote add nombreQueVaATenerElRemoto url}}, ejemplo: \textit{\color{Brown}{git remote add remusEzequiel \url{https://github.com/remusezequiel/Haskell-Algebra1.git}}}. En particular puede ser el nombre que se les haga mas comodo a ustedes.
+
+ Luego de hacer esto ustedes van a tener su repositorio enlazado tanto con su repositorio como con el mio, pueden comprobarlo corriendo \textit{\color{Blue}{git remote -v}} (no les pongo fotos porque no llegue a hacer una cuenta random para poder hacer la ejemplificacion mas grafica)
+
+Ahora, ya tenemos todo enlazado, asi que podemos empezar a trabajar modificando los archivos del repositorio. En particular, no se debe modificar las cosas estando parados en la rama \textit{master}, por lo que \textbf{tenemos que crear una nueva rama y pararnos sobre esta antes de empezar a hacer una modificacion}. Hay un comando que al mismo tiempo de crearte una rama te deja parado sobre esta, el comando es \textit{\color{Blue}{git checkout -b nombreDeLaNuevaRama}}, ejemplo: \textit{\color{Brown}{git checkout -b ramita}}. Listo creamos la rama \textit{ramita} y nos movimos a esta, es decir, pasamos de estar en master a estar en ramita. Ahora, podemos realizar los cambios en el proyecto. Una vez que terminamos de realizar los cambios seguimos los pasos para hacer un commit (status, add ., status, commit -m $"$comentario$"$). Antes de realizar otra cosa, corran el comando \textit{\color{Brown}{git log --online}}, este te enlista todos los commits, vas a ver que el primer commit que te aparece es el que le corresponde a tu ultimo commit y que aparece con \textit{HEAD} apuntando a \textit{ramita}. 
+
+Llego la hora de solicitarle al administrador que incluya los cambios en el repositorio original. Primero, tenemos que enviar la rama local al repositorio que le hiciste el fork, para esto corremos \textit{\color{Brown}{git push remoto rama}}, es decir, en nuestro caso la rama es ramita, porque estamos parados sobre la rama y el remoto es papasConCheddar. Ahora, los cambios que se van a enviar corresponden a la rama en la que estamos ubicados al momento de correr el push, en este caso la rama local se llama ramita. Como le dijimos que los cambios los realice en esa rama, el remoto se va a encargar de crear dicha rama si es que no esta creada todavia. Ahora, si van a su repositorio van a ver que existen dos ramas \textit{master y ramita}. Al lado de la rama \textit{ramita} hay un boton que dice \textbf{New Pull Request}, con ese boton le pedimos al administrador que acepte los cambios sobre el repositorio original (es decir, el repo del admin). Nos va a mandar a una especie de editor de mensajes donde podemos comunicarle al administrador que cambios hiciste y demas, por defecto se llena con el comentario del commit que hiciste. Luego apretamos en el boton verde de abajo que dice \textbf{Create pull request}. 
+
+Una vez hecho el \textit{pull}, el administrador va a ser notificado. Ustedes lo unico que tienen que hacer es esperar a que el administrador acepte los cambios. El administrador los acepta haciendo una cosa que le dicen \textit{mergear un pull request}, esto es crear un nuevo commit en el repo original. Una vez hecho el merge, github les va a mandar un mensaje diciendo que sus cambios fueron aceptados. Si van a su repositorio, van a la solapa de pull request y van a ver que en si todavia no esta aceptado  va a aparecer como \textit{open} y si esta aceptado aparece como \textit{Merged}. 
+
+Luego, tengamos en cuenta que una vez que hagamos un fork y modifiquemos las cosas usando la rama ramita el repositorio nestro va a estar desactualizado respecto del repositorio original, por lo que tenemos que traer el nuevo historial del repositorio original a nuestro repositorio forkeado. Para esto
+nos movemos a la rama master con el comando \textit{\color{Blue}{git checkout master}}. Como el proyecto esta apuntando a dos remotos. Ahora tenemos que hacer un pull de origin con el comando \textit{\color{Blue}{git pull origin master}}, esto trae todo el historial nuevo de la rama master del repositorio original a la rama en la que estamos ubicados (master), luego tenemos que enviar ese historial a tu fork esto se hace con el comando \textit{\color{Blue}{git push papasConCheddar master}}. Y listo, ya tenemos todo actualizado. Luego, para mantener actualizado el repositorio respecto de los cambios que realize el administrador corremos el comando \textit{\color{Blue}{git pull origin master}} para traer los cambios del repositorio del administrador y para subirlo a sus repositorios solo deben corres \textit{\color{Blue}{git push origin master}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -247,8 +329,20 @@ Repositorio de github donde se encuentra el codigo de este proyecto  \emph{}.
 Repositorio de github donde se encuentra el proyecto Cabal  \emph{}.
 
  Link: \textcolor{Red}{\url{https://github.com/haskell/cabal}}
+% 
+%
+\bibitem{IEEEhowto:kopka}
+Mas links  \emph{}.
+
+ Link: \textcolor{Red}{\url{https://guides.github.com/activities/hello-world/?source=post_page-----62dea67aa2eb----------------------}}
 
 
+ Link: \textcolor{Red}{\url{https://www.linuxito.com/programacion/890-como-mantener-tu-fork-sincronizado-con-upstream-en-git}}
+
+ Link: \textcolor{Red}{\url{https://blog.muktek.com/git-colaborativo-fd8baafb8614}}
 \end{thebibliography}
+
+
+
 
 \end{document}
