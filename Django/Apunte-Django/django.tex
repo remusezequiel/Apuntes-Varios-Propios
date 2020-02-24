@@ -1,0 +1,136 @@
+\documentclass[10pt]{article}
+
+
+\usepackage[lmargin=2cm, rmargin=2cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{longtable,multirow,booktabs}
+\usepackage{mathrsfs} % para formato de letra
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{dsfont}%Sirve para poner el simbolo de los reales
+\graphicspath{imagenes}
+\usepackage{hyperref}
+
+
+\title{\bfseries \huge {Apuntes de Django} }
+\author{Ezequiel Remus: $<ezequielremus@gmail.com>$}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%						Ayudas                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\textcolor{LimeGreen}{Hola}
+%\colorbox{LimeGreen}{Hola}
+%\fcolorbox{LimeGreen}{White}{Hola}
+%\fcolorbox{Black}{LimeGreen}{Hola}
+
+%\definecolor{Micolor1}{RGB}{193,124,250}
+%\textcolor{Micolor1}{Hola}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			 	  Definciciones de Variables                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+% COLORES %
+%%%%%%%%%%%
+\definecolor{R}{RGB}{176, 11, 11}
+\definecolor{B}{RGB}{52, 75, 201}
+\definecolor{G}{RGB}{20, 176, 18}
+\definecolor{M}{RGB}{133, 71, 33}
+
+%%%%%%%%%%%
+%  TEXTO  %
+%%%%%%%%%%%
+\newcommand{\py}[1]{{\textcolor{B}{Python} #1}}
+\newcommand{\django}[2]{{\textcolor{G}{Django} #2}}
+\newcommand{\titulo}[3]{\ \textcolor{R} #}
+%\newcommand{\subtitulo}[4]{\underline{\textcolor{B} {#4}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%						Inicio del documento                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+%\pagestyle{myheadings}
+%TITULO
+%modificar el formato del titulo
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Introducción}
+\subsection{¿Que es Django?}
+
+\django{} es un framework web diseñado para realizar aplicaciones de cualquier complejidad en unos tiempos muy razonables.
+
+Está escrito en \py{} y tiene una comunidad muy amplia, que está en continuo crecimiento
+
+\subsection{¿Porqué usarlo?}
+
+Los motivos principales para usar \django{} son:
+ 
+\begin{itemize}
+
+\item Es muy rápido : Si tenés una startup, estas apurado por terminar un proyecto proyecto o, simplemente, querés reducir costes, con \textit{\django{} podéis construir una aplicación muy buena en poco tiempo.}
+ 
+ \item Viene bien cargado : Cualquier cosa que necesitéis realizar, ya estará implementada, sólo hay que adaptarla a vuestras necesidades. Ya sea porque hay módulos de la comunidad, por cualquier paquete \py{} que encontréis o las propias aplicaciones que \django{} trae, que son muy útiles.
+ 
+ \item Es bastante seguro : Podemos estar tranquilos con \django{}, ya que implementa por defecto algunas medidas de seguridad, las más clásicas, para que no haya \textbf{SQL Injection}, no haya \textit{Cross site request forgery} \textbf{(CSRF)} o no haya \textbf{Clickjacking} por \textit{JavaScript}. \django{} se encarga de manejar todo esto de una manera realmente sencilla.
+ 
+ \item Es muy escalable : Podemos pasar desde muy poco a una aplicación enorme perfectamente, una aplicación que sea modular, que funcione rápido y sea estable.
+ 
+ \item Es increíblemente versátil : Es cierto que en un principio \django{} comienza siendo un Framework para almacenar noticias por sitios de prensa, blogs y este estilo de webs, pero con el tiempo ha ganado tanta popularidad que se puede usar para el propósito que queráis.
+\end{itemize}
+
+\textit{Otras bondades de \django{} que no se destacan en la web son:}
+
+Su \textbf{ORM}, su interfaz para acceso a la base de datos , ya que hacer consultas con ella es una maravilla, es una herramienta muy buena.
+
+Trae de serie un panel de administración, con el cual podemos dejar a personas sin ningún tipo de conocimiento técnico manejando datos importantes de una forma muy cómoda
+
+
+\section{Iniciando un proyecto}
+\subsection{Entornos Virtuales}
+Lo primero y más importante es asegurarnos de crear un entorno para trabajar en nuestro proyecto.
+
+Un entorno virtual es básicamente una abstracción la cual crea un conjunto vacío en \py{}, donde solo esta instalada la versión de \py{} que se utiliza junto con \textbf{pip} y las librerías básicas. En este conjunto podremos instalar todas las librerías que utilizaremos en el proyecto. Esto nos permitirá crear luego un archivo de referencia para conocer las librerias y versiones de estas utilizadas por el proyecto. 
+
+Existen varias formas de crear entornos virtuales: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%						ITEMIZE                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item \textbf{Anacconda}: 
+
+	Es una distribución libre y abierta de los lenguajes \py	 y \textit{R}, utilizada en ciencia de datos y aprendizaje automático (\textit{Machine Learning}).
+Esto incluye procesamiento de grandes volúmenes de información, análisis predictivo y cómputos científicos. Esta orientado a simplificar el despliegue y administración de los paquetes de software.
+
+Las diferentes versiones de los paquetes se administran mediante el sistema de gestión de paquetes de \textbf{conda}, el cual lo hace bastante sencillo de instalar, correr y actualizar software de ciencia de datos y machine learning como ser \textit{Scikit-team}, \textit{Tensorflow} y \textit{Scipy}.
+
+La distribución Anaconda incluye más de 250 paquetes de ciencia de datos validos para \textbf{Windows}, \textbf{Linux} y \textbf{MacOs}.
+
+\textcolor{R}{Referencias:} \url{https://docs.anaconda.com}
+
+\item \textbf{Virtualenv}:
+ Es una herramienta para crear entornos de \py aislados, es decir entornos donde las librerías o las versiones de \py no interfieren con las carpetas que \py tiene por defecto en la maáquina. Haciendo una analogía con un edificio, un entorno vendría siendo como una planta, usa ciertos recursos como el agua o la energía eléctrica (para el caso de \py usa la misma máquina) y a su vez cada planta tiene sus propios recursos, tales como los muebles, las habitaciones y demás (para el caso de python hablamos de librerías.)
+
+\item \textbf{pyenv}(Linux):
+\end{itemize} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\end{document}

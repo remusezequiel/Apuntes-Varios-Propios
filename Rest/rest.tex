@@ -1,0 +1,144 @@
+\documentclass[10pt]{article}
+
+
+\usepackage[lmargin=2cm, rmargin=2cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{longtable,multirow,booktabs}
+\usepackage{mathrsfs} % para formato de letra
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{dsfont}%Sirve para poner el simbolo de los reales
+\graphicspath{imagenes}
+\usepackage{hyperref}
+
+
+\title{\bfseries \huge {APIs REST y Django Rest Framework} }
+\author{Ezequiel Remus: $<ezequielremus@gmail.com>$}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%						Ayudas                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\textcolor{LimeGreen}{Hola}
+%\colorbox{LimeGreen}{Hola}
+%\fcolorbox{LimeGreen}{White}{Hola}
+%\fcolorbox{Black}{LimeGreen}{Hola}
+
+%\definecolor{Micolor1}{RGB}{193,124,250}
+%\textcolor{Micolor1}{Hola}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			 	  Definciciones de Variables                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+% COLORES %
+%%%%%%%%%%%
+\definecolor{R}{RGB}{176, 11, 11}
+\definecolor{B}{RGB}{52, 75, 201}
+\definecolor{G}{RGB}{20, 176, 18}
+\definecolor{M}{RGB}{133, 71, 33}
+\definecolor{Mag}{RGB}{143, 19, 135}
+
+%%%%%%%%%%%
+%  TEXTO  %
+%%%%%%%%%%%
+\newcommand{\py}[1]{{\textcolor{B}{Python} #1}}
+\newcommand{\django}[2]{{\textcolor{G}{Django} #2}}
+\newcommand{\rest}[1]{{\textcolor{Mag}{REST} #1}}
+\newcommand{\djrest}[1]{{\textcolor{Mag}{Django Rest} #1}}
+\newcommand{\http}[1]{{\textcolor{B}{HTTP} #1}}
+\newcommand{\enlaces}[1]{{\textcolor{G}{URL} #1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%						Inicio del documento                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+%\pagestyle{myheadings}
+%TITULO
+%modificar el formato del titulo
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Introducción}
+\subsection{¿Qué es \rest{}?}
+
+ \rest{} es cualquier interfaz entre sistemas que use \http{}{\footnote{La petición o HTTP request  es el mensaje que se envia desde el cliente al servidor para solicitar un resource (\textcolor{B}{\href{https://diego.com.es/peticion-http}{Refe}})}} para obtener datos o generar operaciones sobre esos datos en todos los formatos posibles, como \textbf{XML} y \textbf{JSON}. Es una alternativa en auge a otros protocolos estándar de intercambio de datos como \textbf{SOAP} (\textit{Simple Object Access Protocol}), que disponen de una gran capacidad pero también mucha complejidad. A veces es preferible una solución más sencilla de manipulación de datos como \rest{}.
+
+\subsection{Características de \rest{}}
+\begin{itemize}
+\item  \textbf{Protocolo cliente/servidor sin estado:}\\
+Cada petición \http{} contiene toda la información necesaria para ejecutarla, lo que permite que ni cliente ni servidor necesiten recordar ningún estado previo para satisfacerla. Aunque esto es así, algunas aplicaciones \http{} incorporan memoria caché. Se configura lo que se conoce como protocolo cliente-caché-servidor sin estado: existe la posibilidad de definir algunas respuestas a peticiones \http{} concretas como cacheables, con el objetivo de que el cliente pueda ejecutar en un futuro la misma respuesta para peticiones idénticas. De todas formas, que exista la posibilidad no significa que sea lo más recomendable.
+
+\item \textbf{Operaciones:}\\
+Las operaciones más importantes relacionadas con los datos en cualquier sistema \rest{} y la especificación \http{} son cuatro: 
+	\begin{enumerate}
+		\item \textbf{POST} (crear)
+		\item \textbf{GET} (leer y consultar)
+		\item \textbf{PUT} (editar) 
+		\item \textbf{DELETE} (eliminar)
+	\end{enumerate}
+
+\item \textbf{Manipulación:}
+
+ Los objetos en \rest siempre se manipulan a partir de la \enlaces{}. Es la \enlaces{} y ningún otro elemento el identificador único de cada recurso de ese sistema \rest. La \enlaces{} nos facilita acceder a la información para su modificación o borrado, o, por ejemplo, para compartir su ubicación exacta con terceros. 
+
+\item  \textbf{Interfaz uniforme:}
+ 
+Para la transferencia de datos en un sistema \rest{}, este aplica acciones concretas (\textbf{POST}, \textbf{GET}, \textbf{PUT} y \textbf{DELETE}) sobre los recursos, siempre y cuando estén identificados con una \enlaces{}. Esto facilita la existencia de una interfaz uniforme que sistematiza el proceso con la información.
+\end{itemize}
+
+\subsection{Ventajas}
+\begin{itemize}
+\item \textbf{Separación entre el cliente y el servidor:} 
+
+El protocolo \rest{} separa totalmente la interfaz de usuario del servidor y el almacenamiento de datos. Eso tiene algunas ventajas cuando se hacen desarrollos. Por ejemplo, mejora la portabilidad de la interfaz a otro tipo de plataformas, aumenta la escalabilidad de los proyectos y permite que los distintos componentes de los desarrollos se puedan evolucionar de forma independiente.
+
+\item  \textbf{Visibilidad, fiabilidad y escalabilidad:}
+
+ La separación entre cliente y servidor tiene una ventaja evidente y es que cualquier equipo de desarrollo puede escalar el producto sin excesivos problemas. Se puede migrar a otros servidores o realizar todo tipo de cambios en la base de datos, siempre y cuando los datos de cada una de las peticiones se envíen de forma correcta. Esta separación facilita tener en servidores distintos el front y el back y eso convierte a las aplicaciones en productos más flexibles a la hora de trabajar.
+
+\item \textbf{La API \rest{} siempre es independiente del tipo de plataformas o lenguajes:}
+
+ La API \rest{} siempre se adapta al tipo de sintaxis o plataformas con las que se estén trabajando, lo que ofrece una gran libertad a la hora de cambiar o probar nuevos entornos dentro del desarrollo. Con una API \rest{} se pueden tener servidores \textbf{PHP}, \textbf{Java}, \py{} o \textbf{Node.js}. Lo único que es indispensable es que las respuestas a las peticiones se hagan siempre en el lenguaje de intercambio de información usado, normalmente \textbf{XML} o \textbf{JSON}.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%						REFERENCIAS                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{1}
+
+\bibitem{IEEEhowto:kopka}
+
+\textcolor{B}{\href{https://www.django-rest-framework.org}{Documentación Oficial django REST}}
+
+
+\textcolor{B}{\href{https://bbvaopen4u.com/es/actualidad/api-rest-que-es-y-cuales-son-sus-ventajas-en-el-desarrollo-de-proyectos}{bbvaopen4u}}
+
+\bibitem{IEEEhowto:kopka}
+
+\textcolor{B}{\href{https://www.adictosaltrabajo.com}{Adictos al trabajo}}
+
+\bibitem{IEEEhowto:kopka}
+
+\textcolor{B}{\href{https://riptutorial.com/es/django-rest-framework}{Rip Tutorial}}
+
+\bibitem{IEEEhowto:kopka}
+
+\textcolor{B}{\href{https://www.coreapi.org}{Coreapi Documentación}}
+
+
+% \bibitem{IEEEhowto:kopka}
+% Ralph H. Petrucci, F Geoffrey Herring, Jeffry D. Madura, Carey % Bissonnette , \emph{Química General }, 10$^{\textordmasculine}%% $~ed.  Madrid, España: Pearson Education,S.A., 2011.
+
+\end{thebibliography}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

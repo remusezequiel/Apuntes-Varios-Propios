@@ -1,0 +1,10 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{\277Qu\351 es PostgreSQL?}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Caracter\355sticas}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{\277Porque se destaca PostgreSQL ?}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Instalaci\363n}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{Comandos B\341sicos}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Conecci\363n a un Servidor de Base de Datos PostgreSQL }{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Conectarse a PostgreSQL \040mediante psql }{subsection.2.1}% 8
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Connect to PostgreSQL \040database server using pgAdmin }{subsection.2.1}% 9
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Con\351ctese a la base de datos PostgreSQL \040desde otras aplicaciones}{subsection.2.1}% 10
