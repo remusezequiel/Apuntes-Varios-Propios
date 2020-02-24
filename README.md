@@ -9,6 +9,6 @@ los cuales corresponden a textos sobre los cuales me base para escribir dicho ap
 
 ## Historial de actualizaciones
 
--1.  Nov 7, 2019: Commando git. Posible texto final.
--2.  Feb 24, 2020: Agregado de los textos iniciales de PostgreSQl, Django y Rest
+- 1->  Nov 7, 2019: Commando git. Posible texto final.
+- 2->  Feb 24, 2020: Agregado de los textos iniciales de PostgreSQl, Django y Rest
 
