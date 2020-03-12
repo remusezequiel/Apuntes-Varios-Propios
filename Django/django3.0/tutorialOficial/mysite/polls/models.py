@@ -20,7 +20,9 @@ class Question(models.Model):
         Esta funcion al utilizarla mediante el shell, devuelve True
         si la fecha es cercana a la fecha presente.
         """
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        now = timezone.now()
+        #return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
     def __str__(self):
         return '%s %s %s' %(self.id, self.question_text, self.pub_date)

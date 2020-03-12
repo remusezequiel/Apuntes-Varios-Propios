@@ -16,7 +16,30 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Modelos de Activaci\IeC {\'o}n}{11}{subsubsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.4}Jugando con la API}{14}{subsubsection.3.2.4}
 \contentsline {subsubsection}{\numberline {3.2.5}Introducci\IeC {\'o}n al administrador de {\leavevmode {\color {G}Django} }}{17}{subsubsection.3.2.5}
-\contentsline {section}{\numberline {4}Referencias}{21}{section.4}
-\contentsline {subsection}{\numberline {4.1}Refes de las partes de los tutoriales}{21}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Refes W3School}{21}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Atajos}{21}{subsection.4.3}
+\contentsline {subsection}{\numberline {3.3}Escribiendo tu primer aplicaci\IeC {\'o}n con {\leavevmode {\color {G}Django} }, parte 3}{20}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Visi\IeC {\'o}n general}{20}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Escribiendo m\IeC {\'a}s vistas}{21}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Escribiendo vistas que realmente hacen algo}{22}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}Errores 404}{24}{subsubsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.5}Usando el sistema de plantillas}{25}{subsubsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.6}Eliminando URLs codificadas en plantillas}{26}{subsubsection.3.3.6}
+\contentsline {subsubsection}{\numberline {3.3.7}Namespacing URL}{26}{subsubsection.3.3.7}
+\contentsline {subsection}{\numberline {3.4}Escribiendo tu primer aplicaci\IeC {\'o}n en {\leavevmode {\color {G}Django} }, parte 4}{28}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Escribiendo un peque\IeC {\~n}o formulario}{28}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Vistas Gen\IeC {\'e}ricas (Cuanto menos c\IeC {\'o}digo, mejor!)}{31}{subsubsection.3.4.2}
+\contentsline {subsection}{\numberline {3.5}Escribiendo tu primera aplicaci\IeC {\'o}n {\leavevmode {\color {G}Django} }, parte 5}{33}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Testing: Introduciendo pruebas automatizadas}{33}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Estrategias b\IeC {\'a}sicas de Testing}{34}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Escribiendo nuestro primer Test}{34}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Corriendo Testeos}{35}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Arreglamos el Bug}{36}{subsubsection.3.5.5}
+\contentsline {subsubsection}{\numberline {3.5.6}Tests m\IeC {\'a}s completos}{37}{subsubsection.3.5.6}
+\contentsline {subsubsection}{\numberline {3.5.7}Testeando vistas}{37}{subsubsection.3.5.7}
+\contentsline {subsubsection}{\numberline {3.5.8}Algunas ideas para la creacion de otros tests}{42}{subsubsection.3.5.8}
+\contentsline {subsection}{\numberline {3.6}Escribiendo tu primera aplicaci\IeC {\'o}n {\leavevmode {\color {G}Django} }, parte 6}{43}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}Personaliza el aspecto de tu aplicaci\IeC {\'o}n}{43}{subsubsection.3.6.1}
+\contentsline {subsubsection}{\numberline {3.6.2}Imagen de fondo}{44}{subsubsection.3.6.2}
+\contentsline {section}{\numberline {4}Referencias}{45}{section.4}
+\contentsline {subsection}{\numberline {4.1}Refes de las partes de los tutoriales}{45}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Refes W3School}{45}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Atajos}{45}{subsection.4.3}

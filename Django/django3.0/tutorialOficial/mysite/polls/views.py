@@ -1,15 +1,62 @@
 ################################################################################
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.template import loader
+from django.urls import reverse
+from django.views import generic
+from django.utils import timezone
+
+from .models import Question, Choice
 ################################################################################
 
 # Create your views here.
 
 ################################################################################
-def hola_mundo(request):
-    """
-    Funcion inicial Hola mundo, la cual en el tutorial se
-    encuentra como index en la pagina 7 del pdf
-    """
-    return HttpResponse("Hola a todos! ¿como estan?")
+#                   FUNCIONES GENERICAS                                        #
+################################################################################
+class IndexView(generic.ListView):
+    template_name = 'polls/index.html'
+    context_object_name = 'latest_question_list'
+
+    def get_queryset(self):
+        """Devuelve las ultimias cinco publicaciones
+            Nota: __lte => less than or equal to
+         """
+        #return Question.objects.order_by('-pub_date')[:5]
+        return Question.objects.filter(
+            pub_date__lte=timezone.now()
+        ).order_by('.-pub_date')[:5]
+#-----------------------------------------------------------------------------#
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = 'polls/detail.html'
+
+    def get_queryset(self):
+        """
+        Excluye cualquier pregunta que no este publicada aun
+        """
+        return Question.objects.filter(pub_date__lte=timezone.now())
+#-----------------------------------------------------------------------------#
+class ResultsView(generic.DetailView):
+    model = Question
+    template_name = 'polls/results.html'
+#-----------------------------------------------------------------------------#
+def vote(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    try:
+        #Si la opcion es tomada metiante un POST
+        selected_choice = question.choice_set.get(pk=request.POST['choice'])
+    except (KeyError, Choice.DoesNotExist):
+        # Redisplay the question voting form.
+        return render(request, 'polls/detail.html', {
+            'question': question,
+            'error_message': "No elegiste una opcion.",
+        })
+    else:
+        # Entonces, al voto de la opcion le sumo uno
+        # y lo guardo en la base de datos
+        selected_choice.votes += 1
+        selected_choice.save()
+        #Si es asi, se hace la redireccion a la pagina resultados de esta
+        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 ################################################################################
