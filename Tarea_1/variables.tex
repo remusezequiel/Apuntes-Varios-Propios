@@ -1,0 +1,43 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			 	  Definciciones de Variables               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+%     COLORES       %
+%%%%%%%%%%%%%%%%%%%%%
+\definecolor{R}{RGB}{176, 11, 11}
+\definecolor{B}{RGB}{52, 75, 201}
+\definecolor{G}{RGB}{20, 176, 18}
+\definecolor{M}{RGB}{133, 71, 33}
+
+%%%%%%%%%%%
+%  TEXTO  %
+%%%%%%%%%%%
+\newtheorem{teo}{Teorema}[subsection]
+\newtheorem{cor}{Corolario}[subsection]
+\newtheorem{defi}{Definición}[subsection]
+\newtheorem{obs}{Observación}[subsection]
+\newtheorem{propo}{Proposición}[subsection]
+\newtheorem{prop}{Propiedad}[subsection]
+\newtheorem{ej}{Ejercicio}[subsection]
+
+%%%%%%%%%%%%%%%%%%
+%  MATEMATICAS   %
+%%%%%%%%%%%%%%%%%%
+% Este comando es para conjuntos numericos. Ej: \conj{R}
+\newcommand{\conj}[1]{$\mathbb{#1}$ }
+% Vectores
+\newcommand{\vecAn}[1]{{$(a_1,a_2,\cdots,a_n )$ #1}}
+\newcommand{\vecBn}[1]{{$(b_1,b_2,\cdots,b_n )$ #1}}
+\newcommand{\vecdos}[2]{{(#1,#2)}}
+\newcommand{\vectres}[3]{{(#1,#2,#3)}}
+\newcommand{\dom}[1]{{\mathcal{D}}}
+\newcommand{\origen}[1]{{$\mathcal{O}$}}
+\newcommand{\modulo}[1]{{\vert{#1}\vert}}
+\newcommand{\norma}[1]{{\Vert{#1}\Vert}}
+\newcommand{\prodesc}[2]{{\langle #1,#2 \rangle}}
+\newcommand{\cuerpo}[1]{\textbf{#1}}
+
+\newcommand{\titulo}[1]{\subsection{\underline{\textbf{\color{B}{#1}}}}}
+\newcommand{\ejercicio}[1]{\subsection{\textbf{\color{R}{#1}}}}
+\newcommand{\solucion}[1]{\fbox{\textbf{Solución}}#1}
+\newcommand{\resultado}[1]{\color{G}{#1}}
