@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.31)  12 SEP 2020 10:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.31)  12 SEP 2020 11:10
 entering extended mode
 **./Tarea1.tex
 (Tarea1.tex
@@ -715,15 +715,15 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@toc=\write4
 \openout4 = `Tarea1.toc'.
 
-<fig1.jpg, id=33, 448.67625pt x 194.97844pt>
-File: fig1.jpg Graphic file (type jpg)
-<use fig1.jpg>
-Package pdftex.def Info: fig1.jpg  used on input line 94.
+<figuras/fig1.jpg, id=33, 448.67625pt x 194.97844pt>
+File: figuras/fig1.jpg Graphic file (type jpg)
+<use figuras/fig1.jpg>
+Package pdftex.def Info: figuras/fig1.jpg  used on input line 94.
 (pdftex.def)             Requested size: 224.33757pt x 97.48897pt.
-<fig3.jpg, id=34, 95.6072pt x 61.73062pt>
-File: fig3.jpg Graphic file (type jpg)
-<use fig3.jpg>
-Package pdftex.def Info: fig3.jpg  used on input line 113.
+<figuras/fig3.jpg, id=34, 95.6072pt x 61.73062pt>
+File: figuras/fig3.jpg Graphic file (type jpg)
+<use figuras/fig3.jpg>
+Package pdftex.def Info: figuras/fig3.jpg  used on input line 113.
 (pdftex.def)             Requested size: 76.48584pt x 49.38454pt.
 
 
@@ -732,18 +732,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [1{C:/Users/Exactas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 
- <./fig1.jpg>]
-<fig2.jpg, id=53, 122.70844pt x 152.82094pt>
-File: fig2.jpg Graphic file (type jpg)
-<use fig2.jpg>
-Package pdftex.def Info: fig2.jpg  used on input line 131.
+ <./figuras/fig1.jpg>]
+<figuras/fig2.jpg, id=53, 122.70844pt x 152.82094pt>
+File: figuras/fig2.jpg Graphic file (type jpg)
+<use figuras/fig2.jpg>
+Package pdftex.def Info: figuras/fig2.jpg  used on input line 131.
 (pdftex.def)             Requested size: 98.16687pt x 122.2569pt.
-<fig5.jpg, id=55, 425.33907pt x 210.03468pt>
-File: fig5.jpg Graphic file (type jpg)
-<use fig5.jpg>
-Package pdftex.def Info: fig5.jpg  used on input line 178.
+<figuras/fig5.jpg, id=55, 425.33907pt x 210.03468pt>
+File: figuras/fig5.jpg Graphic file (type jpg)
+<use figuras/fig5.jpg>
+Package pdftex.def Info: figuras/fig5.jpg  used on input line 178.
 (pdftex.def)             Requested size: 212.669pt x 105.01707pt.
- [2 <./fig3.jpg> <./fig2.jpg> <./fig5.jpg>]
+ [2 <./figuras/fig3.jpg> <./figuras/fig2.jpg> <./figuras/fig5.jpg>]
 Overfull \hbox (20.06859pt too wide) detected at line 200
  $[]$ 
  []
@@ -764,29 +764,31 @@ ML/ztmcm/m/it/10 R \OT1/ztmcm/m/n/10 + \OML/ztmcm/m/it/10 D\OT1/ztmcm/m/n/10 )
 \OMS/ztmcm/m/n/10   [][] ([])$ 
  []
 
-<fig4.jpg, id=69, 402.00188pt x 335.00156pt>
-File: fig4.jpg Graphic file (type jpg)
-<use fig4.jpg>
-Package pdftex.def Info: fig4.jpg  used on input line 247.
+<figuras/fig4.jpg, id=69, 402.00188pt x 335.00156pt>
+File: figuras/fig4.jpg Graphic file (type jpg)
+<use figuras/fig4.jpg>
+Package pdftex.def Info: figuras/fig4.jpg  used on input line 247.
 (pdftex.def)             Requested size: 201.00044pt x 167.50037pt.
 [3] 
 AED: lastpage setting LastPage
-[4 <./fig4.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
+[4
+
+ <./figuras/fig4.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
  (Tarea1.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
 Package rerunfilecheck Info: File `Tarea1.out' has not changed.
 (rerunfilecheck)             Checksum: F04C0AD8141FFB4056817AE72ADEB7AE;298.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 357.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
  ) 
 Here is how much of TeX's memory you used:
- 12614 strings out of 480790
- 194467 string characters out of 2896363
+ 12615 strings out of 480790
+ 194666 string characters out of 2896363
  527045 words of memory out of 3000000
  28168 multiletter control sequences out of 15000+200000
  587387 words of font info for 221 fonts, out of 3000000 for 9000
@@ -804,7 +806,7 @@ ocal/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Exactas/AppData/
 Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Exactas/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Exactas/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Tarea1.pdf (4 pages, 228086 bytes).
+Output written on Tarea1.pdf (4 pages, 228123 bytes).
 PDF statistics:
  128 PDF objects out of 1000 (max. 8388607)
  27 named destinations out of 1000 (max. 500000)
