@@ -1,0 +1,12 @@
+\babel@toc {spanish}{}
+\contentsline {section}{Item a}{2}{figure.caption.1}%
+\contentsline {subsection}{El auto cae por un plano inclinado}{2}{Item.3}%
+\contentsline {subsection}{El auto se mueve a velocidad $v_0$ en linea recta}{2}{figure.caption.3}%
+\contentsline {subsection}{El auto se mueve en el bucle}{2}{figure.caption.4}%
+\contentsline {section}{Item b}{3}{figure.caption.5}%
+\contentsline {paragraph}{(i)}{3}{paragraph*.6}%
+\contentsline {paragraph}{(ii)}{3}{paragraph*.7}%
+\contentsline {section}{Item c}{3}{paragraph*.7}%
+\contentsline {section}{Item d}{3}{paragraph*.7}%
+\contentsline {section}{Referencias}{4}{section*.9}%
+\contentsfinish 
