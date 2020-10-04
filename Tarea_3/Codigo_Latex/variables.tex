@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			 	  Definciciones de Variables               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+%     COLORES       %
+%%%%%%%%%%%%%%%%%%%%%
+\definecolor{R}{RGB}{176, 11, 11}
+\definecolor{B}{RGB}{52, 75, 201}
+\definecolor{G}{RGB}{20, 176, 18}
+\definecolor{M}{RGB}{133, 71, 33}
+\definecolor{MetallicGold}{RGB}{220, 175, 50}
+\def\Point{36.9}
+%%%%%%%%%%%
+%  TEXTO  %
+%%%%%%%%%%%
+\newtheorem{teo}{Teorema}[subsection]
+\newtheorem{cor}{Corolario}[subsection]
+\newtheorem{defi}{Definición}[subsection]
+\newtheorem{obs}{Observación}[subsection]
+\newtheorem{propo}{Proposición}[subsection]
+\newtheorem{prop}{Propiedad}[subsection]
+\newtheorem{ej}{Ejercicio}[subsection]
+
+\newcommand{\refe}[2]{\href{#1}{\color{B}{#2}}}
+%%%%%%%%%%%%%%%%%%
+%  MATEMATICAS   %
+%%%%%%%%%%%%%%%%%%
+% Este comando es para conjuntos numericos. Ej: \conj{R}
+\newcommand{\conj}[1]{$\mathbb{#1}$ }
+% Vectores
+\newcommand{\vecAn}[1]{{$(a_1,a_2,\cdots,a_n )$ #1}}
+\newcommand{\vecBn}[1]{{$(b_1,b_2,\cdots,b_n )$ #1}}
+\newcommand{\vecdos}[2]{{(#1,#2)}}
+\newcommand{\vectres}[3]{{(#1,#2,#3)}}
+
+\newcommand{\dom}[1]{{(\mathcal{D})}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\modulo}[1]{{\vert{#1}\vert}}
+\newcommand{\prodesc}[2]{{\left\langle #1,#2 \right\rangle}}
+\newcommand{\derivada}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\longcur}[1]{\mathcal{L}(\mathcal{#1})}
+\newcommand{\norma}[1]{\left\lVert #1 \right\rVert}
+
+\newcommand{\curva}{\mathcal{C}}
+
+\newcommand{\sii}{\Leftrightarrow}
+\newcommand{\contenido}{\subseteq}
+\newcommand{\implica}{\Rightarrow}
+\newcommand{\parentesis}[1]{\left( #1 )\right)}
+\newcommand{\distinto}{\cancel{=}}
+\newcommand{\menig}{\leq}
+\newcommand{\mayig}{\geq}
+\newcommand{\union}{\cup}
+\newcommand{\parametrizacion}[2]{#1 : #2 \rightarrow \mathcal{C}}
+
+% Colores y estilos
+\newcommand{\verde}[1]{\color{G}{#1}\color{black}{}}
+\newcommand{\rojo}[1]{\color{R}{#1}\color{black}{}}
+\newcommand{\azul}[1]{\color{B}{#1}\color{black}{}}
+
+\newcommand{\titulo}[1]{\subsection{\underline{\textbf{\color{B}{#1}}}}}
+\newcommand{\ejercicio}[1]{\subsection{\textbf{\color{R}{#1}}}}
+\newcommand{\solucion}{\fbox{\textbf{Solución}}}
+\newcommand{\resultado}[1]{\color{G}{#1}}
+\newcommand{\caja}[3]{\fbox{\begin{minipage}[b][#1\height][t]{#2\textwidth} #3 
+\end{minipage}}}
+
+
+
+
